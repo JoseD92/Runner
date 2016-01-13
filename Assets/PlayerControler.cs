@@ -8,32 +8,41 @@ public class PlayerControler : MonoBehaviour {
     public int speed;
     private int pos;
     public Text countText;
-    private float nextMove;
-    public float moveColldown;
+    public Animator anim;
 
 	// Use this for initialization
 	void Start () {
         dinero = 100;
         pos = 2;
-        nextMove = Time.time;
 	}
 	
 	// Update is called once per frame
 	void LateUpdate () {
+
         transform.position = (transform.position + new Vector3(-1, 0, 0)*Time.deltaTime*speed) ;
-        if (Input.GetKey(KeyCode.LeftArrow) && pos != 1 && Time.time > nextMove)
+
+        if (anim.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.MOB1_M1_Run_F"))
         {
-            nextMove = Time.time+moveColldown;
-            transform.position = transform.position + new Vector3(0, 0, -1);
-            pos -= 1;
+
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && pos != 1)
+            {
+                transform.position = transform.position + new Vector3(0, 0, -1);
+                pos -= 1;
+            }
+
+            if (Input.GetKeyDown(KeyCode.RightArrow) && pos != 3)
+            {
+                transform.position = transform.position + new Vector3(0, 0, 1);
+                pos += 1;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                anim.Play("MOB1_M1_Run_F_Jump", -1, 0);
+            }
+
         }
 
-        if (Input.GetKey(KeyCode.RightArrow) && pos != 3 && Time.time > nextMove)
-        {
-            nextMove = Time.time + moveColldown;
-            transform.position = transform.position + new Vector3(0, 0, 1);
-            pos += 1;
-        }
 	}
 
     void OnTriggerEnter(Collider other)
