@@ -11,13 +11,17 @@ public class PlayerControler : MonoBehaviour {
     public Animator anim;
     private Material[] m;
     public GameObject plano;
+    private Color activeLineColor;
+    private Color unactiveLineColor;
 
 	// Use this for initialization
 	void Start () {
         dinero = 100;
         pos = 2;
         m = plano.GetComponent<Renderer>().materials;
-        m[1].color = new Color(0,255,0);
+        activeLineColor = new Color(1, 1, 1);
+        unactiveLineColor = new Color(0.4980392f, 0.4980392f, 0.4980392f, 1);
+        m[1].color = activeLineColor;
 	}
 	
 	// Update is called once per frame
@@ -31,17 +35,17 @@ public class PlayerControler : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.LeftArrow) && pos != 1)
             {
                 transform.position = transform.position + new Vector3(0, 0, -1);
-                m[pos - 1].color = new Color(0.4980392f , 0.4980392f , 0.4980392f , 1);
+                m[pos - 1].color = unactiveLineColor;
                 pos -= 1;
-                m[pos - 1].color = new Color(0, 255, 0);
+                m[pos - 1].color = activeLineColor;
             }
 
             if (Input.GetKeyDown(KeyCode.RightArrow) && pos != 3)
             {
                 transform.position = transform.position + new Vector3(0, 0, 1);
-                m[pos - 1].color = new Color(0.4980392f , 0.4980392f , 0.4980392f , 1);
+                m[pos - 1].color = unactiveLineColor;
                 pos += 1;
-                m[pos - 1].color = new Color(0, 255, 0);
+                m[pos - 1].color = activeLineColor;
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
