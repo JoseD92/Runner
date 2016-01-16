@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\Coin.cs" />
      <Compile Include="Assets\PlayerControler.cs" />
+     <Compile Include="Assets\slotcontroller.cs" />
      <None Include="Assets\Mobility_01_Free_v2\Mobility_Free_Unity_Info.txt" />
      <None Include="Assets\dummy.txt" />
  <Reference Include="UnityEngine.UI">
