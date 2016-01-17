@@ -32,11 +32,11 @@ public class PlayerControler : MonoBehaviour {
 
         if (anim.GetCurrentAnimatorStateInfo(0).nameHash == Animator.StringToHash("Base Layer.MOB1_M1_Run_F"))
         {
-
+            transform.position = new Vector3(transform.position.x, 0.08f, transform.position.z);
             if (Input.GetKeyDown(KeyCode.LeftArrow) && pos != 1)
             {
-                transform.position = transform.position + new Vector3(0, 0, -1);
-                camara.transform.position = camara.transform.position + new Vector3(0, 0, -1);
+                transform.position = transform.position + new Vector3(0, 0, -1.10f);
+                camara.transform.position = camara.transform.position + new Vector3(0, 0, -1.10f);
                 m[pos - 1].color = unactiveLineColor;
                 pos -= 1;
                 m[pos - 1].color = activeLineColor;
@@ -44,8 +44,8 @@ public class PlayerControler : MonoBehaviour {
 
             if (Input.GetKeyDown(KeyCode.RightArrow) && pos != 3)
             {
-                transform.position = transform.position + new Vector3(0, 0, 1);
-                camara.transform.position = camara.transform.position + new Vector3(0, 0, 1);
+                transform.position = transform.position + new Vector3(0, 0, 1.10f);
+                camara.transform.position = camara.transform.position + new Vector3(0, 0, 1.10f);
                 m[pos - 1].color = unactiveLineColor;
                 pos += 1;
                 m[pos - 1].color = activeLineColor;
@@ -54,13 +54,14 @@ public class PlayerControler : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 anim.Play("MOB1_M1_Run_F_Jump", -1, 0);
+                transform.position = (transform.position + new Vector3(0, 0.1f, 0));
             }
 
         }
 
 	}
 
-    void OnTriggerEnter(Collider other)
+    IEnumerator OnTriggerEnter(Collider other)
     {
         print(other.gameObject.tag);
         if (other.gameObject.CompareTag("Coins"))
@@ -75,6 +76,16 @@ public class PlayerControler : MonoBehaviour {
             speed = 0;
             anim.Play("dead", -1, 0);
             transform.Rotate(-90,0,0);
+            yield return new WaitForSeconds(3);
+            Application.LoadLevel(0);
+        }
+        if (other.gameObject.CompareTag("saltable"))
+        {
+            speed = 0;
+            anim.Play("dead", -1, 0);
+            transform.Rotate(-90, 0, 0);
+            yield return new WaitForSeconds(3);
+            Application.LoadLevel(0);
         }
 
     }
