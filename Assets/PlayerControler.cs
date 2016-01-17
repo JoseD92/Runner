@@ -87,6 +87,12 @@ public class PlayerControler : MonoBehaviour {
             yield return new WaitForSeconds(3);
             Application.LoadLevel(0);
         }
+        if (other.gameObject.CompareTag("fin"))
+        {
+            speed = 0;
+            yield return new WaitForSeconds(2);
+            Application.LoadLevel(0);
+        }
 
     }
 }
