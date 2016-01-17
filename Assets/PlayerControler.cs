@@ -9,6 +9,8 @@ public class PlayerControler : MonoBehaviour {
     private int pos;
     public GameObject camara;
     public Text countText;
+    public Text finText;
+    public Text finText2;
     public Animator anim;
     private Material[] m;
     public GameObject plano;
@@ -26,6 +28,11 @@ public class PlayerControler : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
+        if (Input.GetButtonDown("Submit"))
+        {
+            Application.LoadLevel(0);
+        }
+
 
         transform.position = (transform.position + new Vector3(-1, 0, 0)*Time.deltaTime*speed);
         camara.transform.position = (camara.transform.position + new Vector3(-1, 0, 0) * Time.deltaTime * speed);
@@ -61,7 +68,7 @@ public class PlayerControler : MonoBehaviour {
 
 	}
 
-    IEnumerator OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         print(other.gameObject.tag);
         if (other.gameObject.CompareTag("Coins"))
@@ -76,22 +83,21 @@ public class PlayerControler : MonoBehaviour {
             speed = 0;
             anim.Play("dead", -1, 0);
             transform.Rotate(-90,0,0);
-            yield return new WaitForSeconds(3);
-            Application.LoadLevel(0);
+            finText.text = "Score: " + dinero.ToString();
+            finText2.text = "Press 'enter' to restart";
         }
         if (other.gameObject.CompareTag("saltable"))
         {
             speed = 0;
             anim.Play("dead", -1, 0);
-            transform.Rotate(-90, 0, 0);
-            yield return new WaitForSeconds(3);
-            Application.LoadLevel(0);
+            finText.text = "Score: " + dinero.ToString();
+            finText2.text = "Press 'enter' to restart";
         }
         if (other.gameObject.CompareTag("fin"))
         {
             speed = 0;
-            yield return new WaitForSeconds(2);
-            Application.LoadLevel(0);
+            finText.text = "Score: " + dinero.ToString();
+            finText2.text = "Press 'enter' to restart";
         }
 
     }
