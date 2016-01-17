@@ -1,0 +1,238 @@
+fileFormatVersion: 2
+guid: ec2f46b2a78ab454f9aae168548bf2d3
+timeCreated: 1453069079
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Coin10
+    100002: Coin10 1
+    100004: Coin12
+    100006: Coin12 1
+    100008: Coin13
+    100010: Coin13 1
+    100012: Coin14
+    100014: Coin14 1
+    100016: Coin15
+    100018: Coin15 1
+    100020: Coin16
+    100022: Coin16 1
+    100024: Coin4
+    100026: Coin4 1
+    100028: Coin5
+    100030: Coin5 1
+    100032: //RootNode
+    100034: group6
+    100036: group7
+    100038: pCylinder10
+    100040: pCylinder10 1
+    100042: pCylinder11
+    100044: pCylinder11 1
+    100046: pCylinder13
+    100048: pCylinder13 1
+    100050: pCylinder16
+    100052: pCylinder16 1
+    100054: pCylinder17
+    100056: pCylinder17 1
+    100058: pCylinder18
+    100060: pCylinder18 1
+    100062: pCylinder19
+    100064: pCylinder19 1
+    100066: pCylinder20
+    100068: pCylinder20 1
+    400000: Coin10
+    400002: Coin10 1
+    400004: Coin12
+    400006: Coin12 1
+    400008: Coin13
+    400010: Coin13 1
+    400012: Coin14
+    400014: Coin14 1
+    400016: Coin15
+    400018: Coin15 1
+    400020: Coin16
+    400022: Coin16 1
+    400024: Coin4
+    400026: Coin4 1
+    400028: Coin5
+    400030: Coin5 1
+    400032: //RootNode
+    400034: group6
+    400036: group7
+    400038: pCylinder10
+    400040: pCylinder10 1
+    400042: pCylinder11
+    400044: pCylinder11 1
+    400046: pCylinder13
+    400048: pCylinder13 1
+    400050: pCylinder16
+    400052: pCylinder16 1
+    400054: pCylinder17
+    400056: pCylinder17 1
+    400058: pCylinder18
+    400060: pCylinder18 1
+    400062: pCylinder19
+    400064: pCylinder19 1
+    400066: pCylinder20
+    400068: pCylinder20 1
+    2300000: Coin10
+    2300002: Coin10 1
+    2300004: Coin12
+    2300006: Coin12 1
+    2300008: Coin13
+    2300010: Coin13 1
+    2300012: Coin14
+    2300014: Coin14 1
+    2300016: Coin15
+    2300018: Coin15 1
+    2300020: Coin16
+    2300022: Coin16 1
+    2300024: Coin4
+    2300026: Coin4 1
+    2300028: Coin5
+    2300030: Coin5 1
+    2300032: pCylinder10
+    2300034: pCylinder10 1
+    2300036: pCylinder11
+    2300038: pCylinder11 1
+    2300040: pCylinder13
+    2300042: pCylinder13 1
+    2300044: pCylinder16
+    2300046: pCylinder16 1
+    2300048: pCylinder17
+    2300050: pCylinder17 1
+    2300052: pCylinder18
+    2300054: pCylinder18 1
+    2300056: pCylinder19
+    2300058: pCylinder19 1
+    2300060: pCylinder20
+    2300062: pCylinder20 1
+    3300000: Coin10
+    3300002: Coin10 1
+    3300004: Coin12
+    3300006: Coin12 1
+    3300008: Coin13
+    3300010: Coin13 1
+    3300012: Coin14
+    3300014: Coin14 1
+    3300016: Coin15
+    3300018: Coin15 1
+    3300020: Coin16
+    3300022: Coin16 1
+    3300024: Coin4
+    3300026: Coin4 1
+    3300028: Coin5
+    3300030: Coin5 1
+    3300032: pCylinder10
+    3300034: pCylinder10 1
+    3300036: pCylinder11
+    3300038: pCylinder11 1
+    3300040: pCylinder13
+    3300042: pCylinder13 1
+    3300044: pCylinder16
+    3300046: pCylinder16 1
+    3300048: pCylinder17
+    3300050: pCylinder17 1
+    3300052: pCylinder18
+    3300054: pCylinder18 1
+    3300056: pCylinder19
+    3300058: pCylinder19 1
+    3300060: pCylinder20
+    3300062: pCylinder20 1
+    4300000: pCylinder10
+    4300002: pCylinder11
+    4300004: Coin4
+    4300006: pCylinder16
+    4300008: pCylinder17
+    4300010: Coin12
+    4300012: pCylinder18
+    4300014: pCylinder19
+    4300016: Coin13
+    4300018: Coin14
+    4300020: Coin5
+    4300022: Coin10
+    4300024: Coin15
+    4300026: Coin16
+    4300028: pCylinder13
+    4300030: pCylinder20
+    4300032: pCylinder10
+    4300034: pCylinder11
+    4300036: Coin4
+    4300038: pCylinder16
+    4300040: pCylinder17
+    4300042: Coin12
+    4300044: pCylinder18
+    4300046: pCylinder19
+    4300048: Coin13
+    4300050: Coin14
+    4300052: Coin5
+    4300054: Coin10
+    4300056: Coin15
+    4300058: Coin16
+    4300060: pCylinder13
+    4300062: pCylinder20
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

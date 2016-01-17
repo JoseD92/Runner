@@ -90,6 +90,7 @@ public class PlayerControler : MonoBehaviour {
         {
             speed = 0;
             anim.Play("dead", -1, 0);
+            transform.Rotate(-90, 0, 0);
             finText.text = "Score: " + dinero.ToString();
             finText2.text = "Press 'enter' to restart";
         }
